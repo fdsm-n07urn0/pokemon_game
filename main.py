@@ -30,6 +30,7 @@ def escolher_pokemon_inicial(player):
         else:
             print('Escolha inválida')
 
+            
 def salvar_jogo(player):
     try:
         with open('database.db', 'wb') as arquivo:  # w modo de escrita, b modo binario
@@ -39,6 +40,7 @@ def salvar_jogo(player):
         print('Erro ao salvar jogo')
         print(error)
 
+        
 def carregar_jogo():
     try:
         with open('database.db', 'rb') as arquivo:  # r modo de leitura, b modo binario
