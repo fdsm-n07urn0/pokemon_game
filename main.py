@@ -1,4 +1,4 @@
-import pickle   # Transforma qualquer objeto no python em bytes
+import pickle            # Transforma qualquer objeto no python em bytes
 from pokemon import *
 from pessoa import *
 
@@ -32,27 +32,24 @@ def escolher_pokemon_inicial(player):
 
 def salvar_jogo(player):
     try:
-        with open('database.db', 'wb') as arquivo:  # Abre o arquivo no modo wb -> w modo de escrita, b modo binario
-            pickle.dump(player, arquivo)   # Pega o player e joga dentro do arquivo
+        with open('database.db', 'wb') as arquivo:  # w modo de escrita, b modo binario
+            pickle.dump(player, arquivo)            # Pega o player e joga dentro do arquivo
             print('Jogo salvo com sucesso!')
-            #arquivo.write(player)
     except Exception as error:
         print('Erro ao salvar jogo')
         print(error)
 
 def carregar_jogo():
     try:
-        with open('database.db', 'rb') as arquivo:  # Abre o arquivo no modo rb -> r modo de leitura, b modo binario
-            player = pickle.load(arquivo)   # Pega o conteudo do arquivo e transforma em um objeto (player)
+        with open('database.db', 'rb') as arquivo:  # r modo de leitura, b modo binario
+            player = pickle.load(arquivo)           # Pega o conteudo do arquivo e transforma em um objeto (player)
             print('Loading feito com sucesso')
             return player
-            #arquivo.write(player)
     except Exception as error:
         print('Save não encontrado')
-        #print('Erro ao carregar jogo')
-        #print(error)
+        
 
-if __name__ == '__main__':    # O que estiver dentro dessa função so sera executado se excutar o arquivo main.py
+if __name__ == '__main__':                            # O que estiver dentro dessa função so sera executado se excutar o arquivo main.py
     print('-------------------------------------------')
     print('Bem-vindo ao game Pokemon RPG de terminal')
     print('-------------------------------------------')
@@ -102,10 +99,3 @@ if __name__ == '__main__':    # O que estiver dentro dessa função so sera exec
             player.mostrar_pokemons()
         else:
             print('Escolha inválida')
-
-
-    #player.capturar(PokemonFogo('Charmander', level=1))
-
-    #print(inimigo1)
-    #inimigo1.mostrar_pokemons()
-    #print(player)
