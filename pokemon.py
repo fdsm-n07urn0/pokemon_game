@@ -38,7 +38,7 @@ class Pokemon:
 class PokemonEletrico(Pokemon):       
     tipo = 'eletrico'    
     def atacar(self, pokemon):        
-        print('{} lançou raio do trovão em {}'.format(self, pokemon))    # Substituiu o atacar de cima (class pai)
+        print('{} lançou raio do trovão em {}'.format(self, pokemon))   
         return super().atacar(pokemon)
 
     
@@ -46,7 +46,7 @@ class PokemonFogo(Pokemon):
     tipo = 'fogo'
     def atacar(self, pokemon):
         print('{} lançou uma bola de fogo na cabeça de {}'.format(self, pokemon))
-        return super().atacar(pokemon)  # Chama o atacar da class pai e recebi True ou False e manda de volta
+        return super().atacar(pokemon)  
 
 
 class PokemonAgua(Pokemon):
