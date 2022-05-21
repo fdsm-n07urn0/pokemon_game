@@ -1,3 +1,3 @@
 # Pokemon game
 
-Esse projeto ensina conceitos de orientação a objeto - Curso Python Profissional (Solyd)
+Projeto criado no Curso Python Profissional (Solyd)
