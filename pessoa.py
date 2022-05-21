@@ -77,7 +77,7 @@ class Pessoa:
 class Player(Pessoa):
     tipo = 'player'
     def capturar(self, pokemon):
-        self.pokemons.append(pokemon)                 # Adiciona o pokemon que ser capturado na lista (self.pokemons)
+        self.pokemons.append(pokemon)                 # Adiciona o pokemon que for capturado na lista (self.pokemons)
         print('{} capturou {}'.format(self, pokemon))
 
     def escolher_pokemon(self):
