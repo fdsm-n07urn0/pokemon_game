@@ -30,7 +30,7 @@ class Pessoa:
         return self.nome    
 
     def mostrar_pokemons(self):
-        if self.pokemons:                           # Verifica se tem pokemons na lista
+        if self.pokemons:                          
             print('Pokemons de {}:'.format(self))
             for index, pokemon in enumerate(self.pokemons):   
                 print('{} - {}'.format(index, pokemon))       
